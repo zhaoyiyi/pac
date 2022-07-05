@@ -1,0 +1,13 @@
+{
+    "headers": [
+        {
+          "source": "/hootsuite.pac",
+          "headers" : [
+            {
+              "key" : "Content-Type",
+              "value" : "application/x-ns-proxy-autoconfig"
+            }
+          ]
+        }
+    ]
+}
