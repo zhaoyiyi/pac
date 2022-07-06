@@ -1,9 +1,10 @@
-function FindProxyForURL(url, host) {
-    if (shExpMatch(url, "*.hootops.com*:22")) {
-        return "SOCKS 192.168.2.28:8080";
-    }
+const proxyUrls = [
+    '3.87.173.162',
+    '*.hootops.com*'
+]
 
-    if (shExpMatch(url, "*.hootops.com*")) {
+function FindProxyForURL(url, host) {
+    if (proxyUrls.some(pUrl => shExpMatch(url, pUrl))) {
         return "PROXY 192.168.2.28:8080";
     }
     return "DIRECT";
